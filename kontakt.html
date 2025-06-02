@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – Sehran Nazarov</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Kontakt</h1>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="om-mig.html">Om mig</a>
+      <a href="projekt.html">Projekt</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Du kan nå mig genom att skriva ditt namn och meddelande här nedan.</p>
+
+    <form id="contactForm">
+      <label for="namn">Namn:</label>
+      <input type="text" id="namn" name="namn" placeholder="Ditt namn" required />
+
+      <label for="meddelande">Meddelande:</label>
+      <textarea id="meddelande" name="meddelande" placeholder="Skriv ditt meddelande här..." rows="5" required></textarea>
+
+      <button type="submit">Skicka</button>
+    </form>
+
+    <div id="confirmation" aria-live="polite">✅ Meddelande skickat!</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sehran Nazarov</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      confirmation.classList.add('show');
+      form.reset();
+
+      setTimeout(() => {
+        confirmation.classList.remove('show');
+      }, 3000);
+    });
+  </script>
+
+
+
+</body>
+</html>
