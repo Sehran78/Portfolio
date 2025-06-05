@@ -181,3 +181,42 @@ main section {
 img.liten-bild {
   max-width: 34%;
 }
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+    text-align: left; /* Gör texten lättare att läsa på mobil */
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  img.projektbild,
+  img.hobbybild,
+  img.liten-bild {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bild-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .kontaktikon {
+    top: 10px;
+    right: 15px;
+  }
+}
