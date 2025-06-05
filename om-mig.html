@@ -19,7 +19,7 @@
       color: white;
       padding: 1.5rem 0;
       margin-bottom: 1rem;
-      position: relative; /* Viktigt för att absolut-positionera ikonen */
+      position: relative;
     }
 
     nav a {
@@ -29,11 +29,11 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #ffa500;
     }
 
-    /* Support-ikonen, placera uppe till höger */
     .kontaktikon {
       position: absolute;
       top: 15px;
@@ -61,7 +61,6 @@
       text-align: left;
     }
 
-    /* Kolumn 1: Bild */
     #about-img {
       max-width: 250px;
       border-radius: 15px;
@@ -79,7 +78,6 @@
       box-shadow: 0 15px 30px rgba(0,0,0,0.4);
     }
 
-    /* Kolumn 2: Text */
     .info-text {
       opacity: 0;
       transform: translateY(20px);
@@ -98,6 +96,41 @@
       padding: 1rem 0;
       margin-top: 2rem;
       text-align: center;
+    }
+
+    /* 🌐 MOBILANPASSNING */
+    @media screen and (max-width: 768px) {
+      main {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      #about-img {
+        max-width: 90%;
+        margin-bottom: 1rem;
+        transform: translateY(-50px);
+      }
+
+      .info-text {
+        transform: translateY(20px);
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .kontaktikon {
+        top: 10px;
+        right: 15px;
+      }
+
+      .info-text p {
+        font-size: 1rem;
+      }
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
