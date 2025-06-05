@@ -220,3 +220,17 @@ img.liten-bild {
     right: 15px;
   }
 }
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column; /* 📱 På mobil: lägg bilden ovanpå */
+    text-align: center;
+  }
+
+  .info-text {
+    width: 100%;
+  }
+
+  #about-img {
+    max-width: 80%;
+  }
+}
